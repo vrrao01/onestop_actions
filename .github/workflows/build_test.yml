@@ -29,3 +29,12 @@ jobs:
       - run: flutter pub get
       - run: flutter pub upgrade
       - run: flutter build apk --no-tree-shake-icons
+      - run: echo ${{ github.run_id }}
+      - run: echo ${{ github.run_number }}
+      - run: echo ${{ github.run_attempt }}
+#       - name: Create Release
+#         uses: ncipollo/release-action@v1.10.0
+#         with:
+#           artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+#           tag: 
+
